@@ -9,8 +9,8 @@ class QuoteBox extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        text: "This is a static quote text.",
-        author: "John Doe"
+        text: '"This is a static quote text."',
+        author: "~ John Doe"
       };
     }
   
@@ -19,8 +19,8 @@ class QuoteBox extends Component {
         <div id="quote-box">
           <QuoteText text={this.state.text} />
           <QuoteAuthor author={this.state.author} />
-          <NewQuoteButton />
           <TweetQuoteButton />
+          <NewQuoteButton />
         </div>
       );
     }

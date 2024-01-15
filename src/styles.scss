@@ -1,0 +1,59 @@
+// styles.scss
+
+// Generate a random pastel color for the background
+$random-color: hsl(random(360), 80%, 80%);
+
+body {
+  background-color: $random-color;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: $random-color;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Set the height of the body to the viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+#quote-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+
+#text {
+  font-size: 24px;
+  color: $random-color;
+  margin-bottom: 20px;
+}
+
+#author {
+  font-size: 18px;
+  color: $random-color;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  color: $random-color;
+}
+
+#new-quote,
+#tweet-quote {
+  background-color: $random-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-quote:hover,
+#tweet-quote:hover {
+  background-color: darken($random-color, 10%);
+}
