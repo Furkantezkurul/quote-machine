@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
-import QuoteText from './QuoteText';
-import QuoteAuthor from './QuoteAuthor';
+import QuoteBox from './components/QuoteBox'; // Import your QuoteBox component
 
-class QuoteBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: "This is a static quote text.",
-      author: "John Doe"
-    };
-  }
-
+class App extends Component {
   render() {
     return (
-      <div id="quote-box">
-        <QuoteText text={this.state.text} />
-        <QuoteAuthor author={this.state.author} />
-        <NewQuoteButton />
-        <TweetQuoteButton />
+      <div className="App">
+        <QuoteBox /> 
       </div>
     );
   }
 }
 
-export default QuoteBox;
+export default App;
