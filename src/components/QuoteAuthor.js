@@ -4,7 +4,7 @@ class QuoteAuthor extends Component {
   render() {
     return (
       <div id="author">
-        {this.props.author}
+        ~ {this.props.author}
       </div>
     );
   }
