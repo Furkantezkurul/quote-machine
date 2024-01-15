@@ -4,7 +4,7 @@ class QuoteText extends Component {
   render() {
     return (
       <div id="text">
-        {/* Quote text goes here */}
+        {this.props.text}
       </div>
     );
   }
