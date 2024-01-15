@@ -25,7 +25,7 @@ body {
 }
 
 #text {
-  font-size: 24px;
+  font-size: 48px;
   color: $random-color;
   margin-bottom: 20px;
 }
@@ -49,6 +49,7 @@ body {
   color: white;
   border: none;
   padding: 10px 20px;
+  margin: 20px;
   border-radius: 5px;
   cursor: pointer;
 }
