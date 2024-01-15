@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class NewQuoteButton extends Component {
-  render() {
+const NewQuoteButton = ({onClick}) => {
+  
     return (
-      <button id="new-quote">
+      <button id="new-quote" onClick={onClick}>
         New Quote
       </button>
     );
   }
-}
+
 
 export default NewQuoteButton;

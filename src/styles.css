@@ -1,8 +1,8 @@
 body {
-  background-color: hsl(96, 80%, 80%);
+  background-color: hsl(160, 80%, 80%);
   font-family: "Arial", sans-serif;
   text-align: center;
-  color: hsl(96, 80%, 80%);
+  color: hsl(160, 80%, 80%);
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -20,14 +20,14 @@ body {
 }
 
 #text {
-  font-size: 48px;
-  color: hsl(96, 80%, 80%);
+  font-size: 36px;
+  color: hsl(160, 80%, 80%);
   margin-bottom: 20px;
 }
 
 #author {
   font-size: 18px;
-  color: hsl(96, 80%, 80%);
+  color: hsl(160, 80%, 80%);
 }
 
 #buttons {
@@ -35,12 +35,12 @@ body {
   justify-content: space-between;
   margin-top: 20px;
   align-items: center;
-  color: hsl(96, 80%, 80%);
+  color: hsl(160, 80%, 80%);
 }
 
 #new-quote,
 #tweet-quote {
-  background-color: hsl(96, 80%, 80%);
+  background-color: hsl(160, 80%, 80%);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -51,5 +51,5 @@ body {
 
 #new-quote:hover,
 #tweet-quote:hover {
-  background-color: #a6f075;
+  background-color: #75f0c7;
 }/*# sourceMappingURL=styles.css.map */

@@ -3,28 +3,30 @@ import QuoteText from './QuoteText';
 import QuoteAuthor from './QuoteAuthor';
 import NewQuoteButton from './NewQuoteButton';
 import TweetQuoteButton from './TweetQuoteButton';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchQuote } from '../Redux/actions/quoteAction.js';
 
 
-class QuoteBox extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        text: '"This is a static quote text."',
-        author: "~ John Doe"
-      };
-    }
+
+const QuoteBox = () => {
+    const { text, author } = useSelector((state) => state.quote);
+    const dispatch = useDispatch();
   
-    render() {
-      return (
-        <div id="quote-box">
-          <QuoteText text={this.state.text} />
-          <QuoteAuthor author={this.state.author} />
-          <TweetQuoteButton />
-          <NewQuoteButton />
-        </div>
-      );
-    }
-  }
+    const handleNewQuoteClick = () => {
+    console.log("CLICKED");
+      dispatch(fetchQuote());
+    };
+  
+    return (
+      <div id="quote-box">
+        <QuoteText text={text} />
+        <QuoteAuthor author={author} />
+        <TweetQuoteButton />
+        <NewQuoteButton onClick={handleNewQuoteClick} />
+      </div>
+    );
+  };
   
   export default QuoteBox;
+  
   
