@@ -21,8 +21,16 @@ const QuoteBox = () => {
       $('#text').css('color', newBackgroundColor);
       $('#author').css('color', newBackgroundColor);
       $('buttons').css('color', newBackgroundColor);
-      $('#new-quote', '#tweet-quote').css('background-color', newBackgroundColor);
+      $('#new-quote',).css('background-color', newBackgroundColor);
+      $('#tweet-quote',).css('background-color', newBackgroundColor);
     };
+
+    function tweetQuote() {
+        console.log("TWEET CLICKED");
+        const tweetText = encodeURIComponent(text);
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+        window.open(twitterUrl, '_blank');
+      }
 
     function generateRandomPastelColor() {
         const hue = Math.floor(Math.random() * 360);
@@ -36,7 +44,7 @@ const QuoteBox = () => {
       <div id="quote-box">
         <QuoteText text={text} />
         <QuoteAuthor author={author} />
-        <TweetQuoteButton />
+        <TweetQuoteButton onClick={tweetQuote}/>
         <NewQuoteButton onClick={handleNewQuoteClick} />
       </div>
     );
